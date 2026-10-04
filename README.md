@@ -1,8 +1,10 @@
 # DIRK
 
-An NBA statistic that identifies the exact moment a game becomes mathematically decided and measures the clock time remaining at that point. DIRK stands for Dagger Interval Remaining post-Knockout. It is computed per game and aggregated to the season level for teams and players.
+An NBA statistic that identifies the exact moment a game becomes mathematically decided and measures the clock time remaining at that point. It is computed per game and aggregated to the season level for teams and players.
 
-Built during a summer 2026 research fellowship at Williams College under Prof. Aaron Williams. Presented at the Williams College Summer Science Poster Session in August 2026.
+Research paper: "Daggers and DIRK: Decisive Shots in NBA Games."
+
+Built during a summer 2026 research fellowship at Williams College with Prof. Aaron Williams. Presented at the Williams College Summer Science Poster Session in August 2026.
 
 ## Results
 
@@ -16,21 +18,11 @@ Built during a summer 2026 research fellowship at Williams College under Prof. A
 - Source: NBA play-by-play and box score data via the NBA API. Historical play-by-play (1996-97 onward) comes from the public `shufinskiy/nba_data` archive.
 - Stack: Python, SQL, DuckDB.
 - 2025-26 lineup data covers 1,321 games (1,230 regular season, 6 play-in, 85 playoff). Lineups are reconstructed with `pbpstats`, with a box-score fallback for period starters.
-- Validation: five players per team on the floor at all times, minutes reconciled against official box scores, team totals checked, and spot checks verified by hand. 1,320 of 1,321 games pass cleanly. The one exception is an official box-score error.
+- Validation: five players per team on the floor at all times, minutes reconciled against official box scores, and team floor time equal to 5 × game length. 1,320 of 1,321 games pass cleanly. The one exception traces to an error in the live box score.
 
-## Repository layout
+## Code and data
 
-```
-src/        pipeline and metric scripts
-docs/       poster and writeup
-README.md
-```
-
-Raw data is not committed. Scripts download it from the sources above.
-
-## Status
-
-Active research. The code and writeup will be extended as the work continues.
+The research code and data are maintained in the project repository with Prof. Williams. This page is a summary of the project.
 
 ## Author
 
